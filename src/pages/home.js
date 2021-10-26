@@ -5,38 +5,60 @@ import ShowMoreText from "react-show-more-text";
 function Home() {
     return (
         <div>
-            <div className="container w-3/4 mx-auto font-os ">
-                <div className="w-1/3 ">
-                    <div className="flex flex-col my-auto">
-                        <p className="text-3xl my-3 font-bold">Avinash Jain</p>
-                        <p className="text-xl my-2">Hi there! I'm Avi, a senior at Berkeley studying Electrical Engineering and Computer Science.</p>
-                        <p className="text-xl my-2">I'm on a mission to make a generational impact through the products I build.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div className="">
-                <div className="">
-                    <div className="container w-3/4 mx-auto py-5">
-                        <p className="text-3xl my-5 font-bold">Experiences</p>
-                        <div className="grid grid-cols-1 gap-5">
-                            <div>
-                                <p className="text-2xl font-bold">TigerTalk</p>
-                                <p className="text-xl">CTO & Co-Founder</p>
+            <div className=" bg-gradient-to-r from-red-500 via-purple-500 to-blue-500  h-screen">
+                <div className="container w-4/5 md:w-3/4 lg:w-1/2 mx-auto py-5  flex items-center justify-center h-full">
+                    <div className="bg-white rounded-lg p-24 flex">
+                        <div className="w-1/2 ">
+                            <div className="flex flex-col">
+                                <p className="text-3xl my-3 font-bold">Avinash Jain</p>
+                                <p className="text-xl my-2">Hi there! I'm Avi, a senior at Berkeley studying Electrical Engineering and Computer Science.</p>
+                                <p className="text-xl my-2">I'm on a mission to make a generational impact through the products I build.</p>
                             </div>
-                            <div>
-                                <p className="text-2xl">The Codex</p>
-                            </div>
+                        </div>
+                        <div className="w-1/2">
+                            <img className='w-3/4 mx-auto' src='./static/images/avinft2.png' />
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="">
+                <div className=" bg-gradient-to-b from-white to-gray-200">
+                    <div className="container w-4/5 md:w-3/4 lg:w-1/2 mx-auto py-5">
+                        <p className="text-3xl mt-5 font-bold text-gray-800">Experience</p>
+                        <p className="text-2xl mt-2 mb-5 font-normal text-gray-700">Listen. Sketch. Build. Ship.</p>
+                        <div className="grid grid-cols-1 gap-5">
+                            <div>
+                                <p className="text-2xl font-bold">Blend</p>
+                                <p className='text-lg leading-6 text-gray-700 my-1'>PM Intern | <span className="text-sm">2021</span></p>
+                                <p className='text-md my-2 text-gray-700'>Mapped the customer journey in the homebuying process, led customer interviews and discovered opportunities for Blend to innovate in. Built frameworks to analyze these ideas and wrote specs on the most compelling ones.</p>
+                            </div>
+                            <div>
+                                <p className="text-2xl font-bold"><a className="underline hover:opacity-70" target="_blank" href='https://tigertalk.io/'>TigerTalk</a></p>
+                                <p className='text-lg leading-6 text-gray-700 my-1'>CTO & Co-Founder | <span className="text-sm">2020 - 2021</span></p>
+                                <p className='text-md my-2 text-gray-700'>Designed, developed and scaled an AI communication coaching startup combining human feedback with AI. Sold our platform to speech & debate teams, individual coaches and training firms. Analyzed both audio and video with coach-inputted timestamped feedback on serverless architecture. </p>
+                                <p className="text-gray-700"><b>Stats:</b> $30K+ in beta revenue. 2,500+ speeches analyzed.  300+ user interviews. $1,500 MRR. </p>
 
+                            </div>
+                            <div>
+                                <p className="text-2xl font-bold"><a className="underline hover:opacity-70" target="_blank" href='https://calhacks.io/cubstart'>Amazon</a></p>
+                                <p className='text-lg leading-6 text-gray-700 my-1'>SDE Intern | <span className="text-sm">2020</span></p>
+                                <p className='text-md my-2 text-gray-700'>Wrote iOS curriculum for Cubstart, Cal Hacks' program for teaching beginners how to build. Led a 4-week iOS bootcamp and taught a semester-long decal.</p>
+                            </div>
+                            <div>
+                                <p className="text-2xl font-bold"><a className="underline hover:opacity-70" target="_blank" href='https://calhacks.io/cubstart'>Apple</a></p>
+                                <p className='text-lg leading-6 text-gray-700 my-1'>SWE Intern | <span className="text-sm">2019</span></p>
+                                <p className='text-md my-2 text-gray-700'>Wrote iOS curriculum for Cubstart, Cal Hacks' program for teaching beginners how to build. Led a 4-week iOS bootcamp and taught a semester-long decal.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div className="">
                 <div className=" bg-gradient-to-b from-gray-200 to-gray-100">
                     <div className="container w-4/5 md:w-3/4 lg:w-1/2 mx-auto py-5">
-                        <p className="text-3xl my-5 font-bold">Teaching</p>
+                        <p className="text-3xl mt-5 font-bold text-gray-800">Teaching</p>
                         <p className="text-2xl mt-2 mb-5 font-normal text-gray-700">"Hey guys, Avi here. Welcome back to The Codex."</p>
                         <div className="grid grid-cols-1 gap-5">
                             <div>
@@ -51,7 +73,7 @@ function Home() {
                                 <p className='text-md my-2 text-gray-700'>Taught CS 170 - efficient algorithms and intractable problems. Launched and led The Production Company, a 12-person TA team to create weekly 170 videos.</p>
                             </div>
                             <div>
-                            <p className="text-2xl font-bold"><a className="underline hover:opacity-70" target="_blank" href='https://calhacks.io/cubstart'>Cubstart</a></p>
+                                <p className="text-2xl font-bold"><a className="underline hover:opacity-70" target="_blank" href='https://calhacks.io/cubstart'>Cubstart</a></p>
                                 <p className='text-lg leading-6 text-gray-700 my-1'>Lead Instructor | <span className="text-sm">2019 - 2020</span></p>
                                 <p className='text-md my-2 text-gray-700'>Wrote iOS curriculum for Cubstart, Cal Hacks' program for teaching beginners how to build. Led a 4-week iOS bootcamp and taught a semester-long decal.</p>
                             </div>
@@ -59,7 +81,6 @@ function Home() {
                         </div>
                     </div>
                 </div>
-
             </div>
             <div className="">
                 <div className=" bg-gradient-to-b from-gray-100 to-purple-50">
