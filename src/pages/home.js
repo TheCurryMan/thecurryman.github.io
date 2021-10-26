@@ -1,37 +1,63 @@
 import { allProjects } from "./projects";
 import ShowMoreText from "react-show-more-text";
+import { useState } from "react";
 
 
 function Home() {
+    const [value, setValue] = useState(false);
     return (
         <div>
-            <div className=" bg-gradient-to-r from-red-500 via-purple-500 to-blue-500  h-screen">
-                <div className="container w-4/5 md:w-3/4 lg:w-1/2 mx-auto py-5  flex items-center justify-center h-full">
-                    <div className="bg-white rounded-lg p-24 flex">
-                        <div className="w-1/2 ">
-                            <div className="flex flex-col">
-                                <p className="text-3xl my-3 font-bold">Avinash Jain</p>
-                                <p className="text-xl my-2">Hi there! I'm Avi, a senior at Berkeley studying Electrical Engineering and Computer Science.</p>
-                                <p className="text-xl my-2">I'm on a mission to make a generational impact through the products I build.</p>
-                                <div className="grid grid-cols-4 w-1/2 mt-5">
-                                    <a href='mailto:avinashj@berkeley.edu'>
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                                        </svg>
-                                    </a>
-                                    <a href='https://twitter.com/avinashj_' target="_blank" rel="noopener noreferrer">
-                                        <img src='./static/images/twitter.png' className="w-5" />
-                                    </a>
-                                    <a href='https://github.com/TheCurryMan' target="_blank" rel="noopener noreferrer">
-                                        <img src='./static/images/github.svg' className="w-5" />
-                                    </a>
+            <div className=" bg-gradient-to-r from-red-500 via-purple-500 to-blue-500  min-h-screen">
+                <div className="container w-4/5 md:w-3/4 lg:w-3/4 xl:w-3/5 mx-auto py-5  flex flex-col items-center justify-center h-screen">
+                    <div className="bg-white rounded-lg  min-w-full px-12 py-10 lg:px-24 lg:py-20 flex ">
+                        {!value ?
+                            <div className="flex flex-col-reverse md:flex md:flex-row">
+                                <div className="md:w-1/2 ">
+                                    <div className="flex flex-col w-full">
+
+                                        <div>
+                                            <p className="text-3xl my-3 font-bold text-gray-900">Avinash Jain</p>
+                                            <p className="text-xl my-2 text-gray-800">Hi there! I'm Avi, a senior at Berkeley studying Electrical Engineering and Computer Science.</p>
+                                            <p className="text-xl my-2 text-gray-800">I'm on a mission to make a generational impact through the products I build.</p>
+                                            <div className="grid grid-cols-4 w-1/2 mt-5">
+                                                <a href='mailto:avinashj@berkeley.edu'>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                                    </svg>
+                                                </a>
+                                                <a href='https://twitter.com/avinashj_' target="_blank" rel="noopener noreferrer">
+                                                    <img src='./static/images/twitter.png' className="w-5" />
+                                                </a>
+                                                <a href='https://github.com/TheCurryMan' target="_blank" rel="noopener noreferrer">
+                                                    <img src='./static/images/github.svg' className="w-5" />
+                                                </a>
+                                            </div>
+                                            <p onClick={() => setValue(!value)} className="text-xl mt-10 border-b-2 border-black pb-2 w-max cursor-pointer text-gray-800 hover:opacity-60">What I'm up to now.</p>
+                                        </div>
+                                    </div>
                                 </div>
+                                <div className="md:w-1/2 h-full">
+                                    <img className='w-3/4 mx-auto my-auto ' src='./static/images/avinft2.png' />
+                                </div>
+
+
                             </div>
-                        </div>
-                        <div className="w-1/2">
-                            <img className='w-3/4 mx-auto' src='./static/images/avinft2.png' />
-                        </div>
+                            : <div>
+                                <p className="text-3xl my-3 font-bold text-gray-900">Now</p>
+                                <ul className=" list-disc list-outside text-black">
+                                    <li className="text-lg text-gray-700 my-2"> Recently got into Crypto through my manager at Blend. Exploring DeFi and NFTs on Ethereum and Solana and building <a className="text-gray-800 pb-1 border-b border-black hover:opacity-70" target='_blank' href=''>ZooKeeper</a> - an NFT portfolio manager. </li>
+                                    <li className="text-lg text-gray-700 my-2"> Took up a part-time role at <a className="text-gray-800 pb-1 border-b border-black hover:opacity-70" href='https://www.pahdolabs.com/' target='_blank' >Pahdo Labs</a>, learning how to write smart contracts and integrate crypto into gaming. </li>                                    <li className="text-xl text-gray-700 my-2"> Spending a lot of time thinking about what an NFT could represent. Social investing + subscriptions as NFTs + adding utility to NFTs are top of mind.</li>
+                                    <li className="text-lg text-gray-700 my-2"> Living up senior year in its truest fashion - work hard, play hard. Clueless in classes, driving golf carts for Cal Hacks.</li>
+                                    <li className="text-lg text-gray-700 my-2"> Teaching CS 170 semester in-person, getting better at writing with chalk and not being absolutely clueless for the first hour at homework parties.</li>
+                                </ul>
+                                <p className="text-gray-500 mt-7">Last Updated: October 26th.</p>
+                                <p onClick={() => setValue(!value)} className="text-xl mt-10 border-b-2 border-black pb-2 w-max cursor-pointer text-gray-800 hover:opacity-60">Home</p>
+                            </div>
+                        }
+                    </div>
+                    <div className="mt-12 opacity-50 text-white text-3xl">
+                        &darr;
                     </div>
                 </div>
             </div>
@@ -56,12 +82,12 @@ function Home() {
                             <div>
                                 <p className="text-2xl font-bold text-gray-000"><a className="underline hover:opacity-70" target="_blank" href='https://calhacks.io/cubstart'>Amazon</a></p>
                                 <p className='text-lg leading-6 text-gray-700 my-1'>SDE Intern | <span className="text-sm">2020</span></p>
-                                <p className='text-md my-2 text-gray-700'>Wrote iOS curriculum for Cubstart, Cal Hacks' program for teaching beginners how to build. Led a 4-week iOS bootcamp and taught a semester-long decal.</p>
+                                <p className='text-md my-2 text-gray-700'>Wrote back-end algorithms to automatically extrapolate insights from big data through data modelling and inference on the Amazon Ads team.</p>
                             </div>
                             <div>
                                 <p className="text-2xl font-bold"><a className="underline hover:opacity-70" target="_blank" href='https://calhacks.io/cubstart'>Apple</a></p>
                                 <p className='text-lg leading-6 text-gray-700 my-1'>SWE Intern | <span className="text-sm">2019</span></p>
-                                <p className='text-md my-2 text-gray-700'>Wrote iOS curriculum for Cubstart, Cal Hacks' program for teaching beginners how to build. Led a 4-week iOS bootcamp and taught a semester-long decal.</p>
+                                <p className='text-md my-2 text-gray-700'>Contributed to the iOS team on Apple News, building features for publishers to more efficiently create content for the platform.</p>
                             </div>
 
                         </div>
