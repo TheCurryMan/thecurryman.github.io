@@ -8,7 +8,7 @@ function Home() {
     return (
         <div>
             <div className=" bg-gradient-to-r from-red-500 via-purple-500 to-blue-500  min-h-screen">
-                <div className="container w-4/5 md:w-3/4 lg:w-3/4 xl:w-3/5 mx-auto py-5  flex flex-col items-center justify-center h-screen">
+                <div className="container w-4/5 md:w-3/4 lg:w-3/4 xl:w-3/5 max-w-6xl mx-auto py-5  flex flex-col items-center justify-center h-screen">
                     <div className="bg-white rounded-lg  min-w-full px-12 py-10 lg:px-24 lg:py-20 flex ">
                         {!value ?
                             <div className="flex flex-col-reverse md:flex md:flex-row">
@@ -57,7 +57,7 @@ function Home() {
                             </div>
                         }
                     </div>
-                    <div className="mt-12 opacity-50 text-white text-3xl">
+                    <div className="mt-12 mb-4 opacity-50 text-white text-3xl">
                         &darr;
                     </div>
                 </div>
@@ -66,7 +66,7 @@ function Home() {
                 <div className=" bg-gradient-to-b from-gray-100 to-gray-50 py-10">
                     <div className="container w-4/5 md:w-3/4 lg:w-1/2 mx-auto py-5">
                         <p className="text-3xl mt-5 font-bold text-gray-900">Experience</p>
-                        <p className="text-2xl mt-2 mb-5 font-normal text-gray-700">Listen. Sketch. Build. Ship.</p>
+                        <p className="text-2xl mt-2 mb-5 font-normal text-gray-700">Eat. Code. <s>Sleep.</s> Repeat.</p>
                         <div className="grid grid-cols-1 gap-5">
                             <div>
                                 <p className="text-2xl font-bold text-gray-800">Blend</p>
