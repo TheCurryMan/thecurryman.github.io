@@ -47,7 +47,8 @@ function Home() {
                                 <p className="text-3xl my-3 font-bold text-gray-900">Now</p>
                                 <ul className=" list-disc list-outside text-black">
                                     <li className="text-lg text-gray-700 my-2"> Recently got into Crypto through my manager at Blend. Exploring DeFi and NFTs on Ethereum and Solana and building <a className="text-gray-800 pb-1 border-b border-black hover:opacity-70" target='_blank' href=''>ZooKeeper</a> - an NFT portfolio manager. </li>
-                                    <li className="text-lg text-gray-700 my-2"> Took up a part-time role at <a className="text-gray-800 pb-1 border-b border-black hover:opacity-70" href='https://www.pahdolabs.com/' target='_blank' >Pahdo Labs</a>, learning how to write smart contracts and integrate crypto into gaming. </li>                                    <li className="text-xl text-gray-700 my-2"> Spending a lot of time thinking about what an NFT could represent. Social investing + subscriptions as NFTs + adding utility to NFTs are top of mind.</li>
+                                    <li className="text-lg text-gray-700 my-2"> Took up a part-time role at <a className="text-gray-800 pb-1 border-b border-black hover:opacity-70" href='https://www.pahdolabs.com/' target='_blank' >Pahdo Labs</a>, learning how to write smart contracts and integrate crypto into gaming. </li>                                    
+                                    <li className="text-lg text-gray-700 my-2"> Spending a lot of time thinking about what an NFT could represent. Social investing + subscriptions as NFTs + adding utility to NFTs are top of mind.</li>
                                     <li className="text-lg text-gray-700 my-2"> Living up senior year in its truest fashion - work hard, play hard. Clueless in classes, driving golf carts for Cal Hacks.</li>
                                     <li className="text-lg text-gray-700 my-2"> Teaching CS 170 semester in-person, getting better at writing with chalk and not being absolutely clueless for the first hour at homework parties.</li>
                                 </ul>
@@ -77,6 +78,13 @@ function Home() {
                                 <p className='text-lg leading-6 text-gray-700 my-1'>CTO & Co-Founder | <span className="text-sm">2020 - 2021</span></p>
                                 <p className='text-md my-2 text-gray-700'>Designed, developed and scaled an AI communication coaching startup combining human feedback with AI. Sold our platform to speech & debate teams, individual coaches and training firms. Analyzed both audio and video with coach-inputted timestamped feedback on serverless architecture. </p>
                                 <p className="text-gray-700"><b>Stats:</b> $30K+ in beta revenue. 2,500+ speeches analyzed.  300+ user interviews. $1,500 MRR. </p>
+
+                            </div>
+                            <div>
+                                <p className="text-2xl font-bold text-gray-000"><a className="underline hover:opacity-70" target="_blank" href='https://calhacks.io/'>Cal Hacks</a></p>
+                                <p className='text-lg leading-6 text-gray-700 my-1'>Executive Director, General Director | <span className="text-sm">2019 - 2021</span></p>
+                                <p className='text-md my-2 text-gray-700'>Led Cal Hacks, the world's largest collegiate hackathon during the pandemic. Organized a 26-director team to launch two brand-new virtual initiatives, <a className="underline hover:opacity-70" target="_blank" href='https://hacknow.calhacks.io/'>hack:now</a> and <a className="underline hover:opacity-70" target="_blank" href='https://hackmonth.calhacks.io/'>Hack Month</a>. Formed a family, made lifelong friends.</p>
+                                <p className="text-gray-700"><b>Stats:</b> [hack:now] 2,500 hackers. 90+ countries. 200+ submissions. In just 4 weeks. </p>
 
                             </div>
                             <div>
