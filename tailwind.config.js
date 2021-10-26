@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     fontFamily: {
       'rubik': ['Rubik', 'sans-serif'],
-      'poppins': ['Poppins', 'sans-serif']
+      'poppins': ['Poppins', 'sans-serif'],
+      'os': ['Open Sans', 'sans-serif']
     },
     extend: {},
   },
