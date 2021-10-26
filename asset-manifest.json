@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/TheCurryMan/thecurryman.github.io/static/css/main.302dc3b0.chunk.css",
+    "main.js": "/TheCurryMan/thecurryman.github.io/static/js/main.e829d525.chunk.js",
+    "main.js.map": "/TheCurryMan/thecurryman.github.io/static/js/main.e829d525.chunk.js.map",
+    "runtime-main.js": "/TheCurryMan/thecurryman.github.io/static/js/runtime-main.e77867a1.js",
+    "runtime-main.js.map": "/TheCurryMan/thecurryman.github.io/static/js/runtime-main.e77867a1.js.map",
+    "static/js/2.69bfe3b9.chunk.js": "/TheCurryMan/thecurryman.github.io/static/js/2.69bfe3b9.chunk.js",
+    "static/js/2.69bfe3b9.chunk.js.map": "/TheCurryMan/thecurryman.github.io/static/js/2.69bfe3b9.chunk.js.map",
+    "static/js/3.83c75214.chunk.js": "/TheCurryMan/thecurryman.github.io/static/js/3.83c75214.chunk.js",
+    "static/js/3.83c75214.chunk.js.map": "/TheCurryMan/thecurryman.github.io/static/js/3.83c75214.chunk.js.map",
+    "index.html": "/TheCurryMan/thecurryman.github.io/index.html",
+    "static/css/main.302dc3b0.chunk.css.map": "/TheCurryMan/thecurryman.github.io/static/css/main.302dc3b0.chunk.css.map",
+    "static/js/2.69bfe3b9.chunk.js.LICENSE.txt": "/TheCurryMan/thecurryman.github.io/static/js/2.69bfe3b9.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/TheCurryMan/thecurryman.github.io/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e77867a1.js",
+    "static/js/2.69bfe3b9.chunk.js",
+    "static/css/main.302dc3b0.chunk.css",
+    "static/js/main.e829d525.chunk.js"
+  ]
+}
