@@ -55,10 +55,7 @@ export default function Home() {
                   company. And we&apos;re closing your books faster and more
                   accurately than any other tool or human. If you&apos;re
                   interested in joining us,{" "}
-                  <a
-                    href="https://wellfound.com/company/quanta-13"
-                    target="_blank"
-                  >
+                  <a href="https://www.usequanta.com/careers" target="_blank">
                     we&apos;re hiring!
                   </a>
                 </p>
