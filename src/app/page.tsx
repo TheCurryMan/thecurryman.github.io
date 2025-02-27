@@ -41,14 +41,14 @@ export default function Home() {
                     <u>Quanta</u>
                   </a>
                   , a seed-stage startup backed by Accel. We&apos;re a team of
-                  5, automating accounting for 20+ companies with a simple
-                  principle:{" "}
+                  8, building the fastest accounting service for 35+ software
+                  companies. We have a simple principle:{" "}
                 </p>
                 <div></div>
                 <blockquote className="text-gray-700 not-italic font-normal mb-1">
                   To answer any financial question or insight about your
-                  business, you need real-time, high quality data. To get that
-                  data, you <b>have to do the accounting</b>.
+                  business, you need real-time, high quality data. Doing the
+                  accounting is the only way to get that data.
                 </blockquote>
                 <p className="text-gray-700">
                   We&apos;re building the best source of financial data for your
@@ -100,7 +100,7 @@ export default function Home() {
                 </div>
               </div>
               <h4 className="my-4 font-normal text-xs text-gray-500">
-                Last updated: Aug 3rd, 2024
+                Last updated: Feb 27th, 2025
               </h4>
             </div>
           </div>
