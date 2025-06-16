@@ -40,7 +40,7 @@ export default function Home() {
                   <a target="_blank" href="https://www.usequanta.com/">
                     <u>Quanta</u>
                   </a>
-                  , a seed-stage startup backed by Accel. We&apos;re a team of
+                  , a Series A startup backed by Accel. We&apos;re a team of
                   13, building the fastest accounting service for 45+ software
                   companies. We have a simple principle:{" "}
                 </p>
