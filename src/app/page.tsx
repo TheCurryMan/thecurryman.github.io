@@ -31,7 +31,7 @@ export default function Home() {
           <div className="max-w-2xl mx-auto p-4 ">
             <div className="">
               <h1 className="font-serif text-black font-normal text-3xl ">
-                Avinash Jain
+                Avi Jain
               </h1>
               <div className="prose mt-4">
                 <p className=" text-gray-700">
