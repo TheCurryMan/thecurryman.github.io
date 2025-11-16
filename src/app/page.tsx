@@ -31,17 +31,17 @@ export default function Home() {
           <div className="max-w-2xl mx-auto p-4 ">
             <div className="">
               <h1 className="font-serif text-black font-normal text-3xl ">
-                Avi Jain
+                Avinash Jain
               </h1>
               <div className="prose mt-4">
                 <p className=" text-gray-700">
-                  Hey there! I&apos;m Avi. I live in SF and I&apos;m an early
+                  Hey there! I&apos;m Avinash. I live in SF and I&apos;m an early
                   engineer at{" "}
                   <a target="_blank" href="https://www.usequanta.com/">
                     <u>Quanta</u>
                   </a>
                   , a Series A startup backed by Accel. We&apos;re a team of
-                  13, building the fastest accounting service for 45+ software
+                  16, building the fastest accounting service for 60+ software
                   companies. We have a simple principle:{" "}
                 </p>
                 <div></div>
@@ -170,7 +170,7 @@ export default function Home() {
               <hr className="my-6" />
               <h1 className="mb-1">Teaching</h1>
               <div className="text-sm text-gray-500 mb-6">
-                &quot;Hey guys, Avi here. Welcome back!&quot;
+                &quot;Hey guys, Avinash here. Welcome back!&quot;
               </div>
               <div className="flex flex-col gap-4 leading-6">
                 <ExperienceMini
