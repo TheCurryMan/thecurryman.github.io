@@ -41,7 +41,7 @@ export default function Home() {
                     <u>Quanta</u>
                   </a>
                   , a Series A startup backed by Accel. We&apos;re a team of
-                  16, building the fastest accounting service for 60+ software
+                  16, building the fastest accounting service for 65+ software
                   companies. We have a simple principle:{" "}
                 </p>
                 <div></div>
@@ -100,7 +100,7 @@ export default function Home() {
                 </div>
               </div>
               <h4 className="my-4 font-normal text-xs text-gray-500">
-                Last updated: Feb 27th, 2025
+                Last updated: Dec 1st, 2025
               </h4>
             </div>
           </div>
@@ -188,7 +188,7 @@ export default function Home() {
                   role="instructor · iOS and web curriculum for beginners"
                 />
               </div>
-              <hr className="my-6" />
+              {/* <hr className="my-6" />
               <div>
                 <h1 className="mb-1">Readings</h1>
                 <div className="text-sm text-gray-500 mb-6">
@@ -206,8 +206,6 @@ export default function Home() {
                   <ul className="list-item list-inside m-0 text-blue-500 font-semibold">
                     Shoe Dog
                   </ul>
-                  <ul className="text-black mb-1 font-semibold">2022</ul>
-                  <hr className="my-1" />
                   <ul className="list-item list-inside m-0">1984</ul>
                   <ul className="list-item list-inside m-0">
                     The Secret History of Food
@@ -263,8 +261,6 @@ export default function Home() {
                   <ul className="list-item list-inside m-0">
                     The Tale of Two Cities
                   </ul>
-                  <ul className="text-black mb-1 font-semibold">2023</ul>
-                  <hr className="my-1" />
                   <ul className="list-item list-inside m-0">
                     Debt: The First 5,000 years
                   </ul>
@@ -284,11 +280,6 @@ export default function Home() {
                     Zen and the Art of Motorcycle Maintenance
                   </ul>
                   <ul className="list-item list-inside m-0">Stay True*</ul>
-                  <ul className="list-item list-inside m-0">
-                    Brother&apos;s Karamazov*
-                  </ul>
-
-                  <ul className="text-black mb-1 font-semibold">2024</ul>
                 </div>
               </div>
 
@@ -330,7 +321,7 @@ export default function Home() {
                   panelColors={panelColors}
                 />
               </div>
-              <hr className="my-6" />
+              <hr className="my-6" /> */}
             </article>
           </div>
         </div>
