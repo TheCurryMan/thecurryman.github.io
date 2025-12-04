@@ -35,7 +35,7 @@ export default function Home() {
               </h1>
               <div className="prose mt-4">
                 <p className=" text-gray-700">
-                  Hey there! I&apos;m Avinash. I live in SF and I&apos;m an early
+                  Hey there! I&apos;m Avi. I live in SF and I&apos;m an early
                   engineer at{" "}
                   <a target="_blank" href="https://www.usequanta.com/">
                     <u>Quanta</u>
