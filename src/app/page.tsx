@@ -41,7 +41,7 @@ export default function Home() {
                     <u>Quanta</u>
                   </a>
                   , a Series A startup backed by Accel. We&apos;re a team of
-                  16, building the fastest accounting service for 75+ software
+                  16, building the fastest accounting service for 70+ software
                   companies. We have a simple principle:{" "}
                 </p>
                 <div></div>
