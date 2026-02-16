@@ -1,8 +1,10 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Manrope, Lato } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
+const lato = Lato({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-lato" });
 
 export const metadata = {
   title: "Avinash Jain",
@@ -24,7 +26,7 @@ export default function RootLayout({
           type="text/css"
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} ${manrope.variable} ${lato.variable}`}>
         {children}
         <Analytics />
       </body>

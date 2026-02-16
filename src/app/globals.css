@@ -25,3 +25,32 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* Ensure Lato font is used for resume */
+.font-lato {
+  font-family: var(--font-lato), 'Lato', sans-serif !important;
+}
+
+/* Print styles for resume */
+@media print {
+  @page {
+    size: letter;
+    margin: 0;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .font-lato, .font-lato * {
+    font-family: var(--font-lato), 'Lato', sans-serif !important;
+  }
+
+  .print\:hidden {
+    display: none !important;
+  }
+}
