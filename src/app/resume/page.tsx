@@ -28,9 +28,8 @@ function formatBullet(text: string): React.ReactNode {
 
 function SectionHeader({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-[#e8f4fc] py-1 px-2 mb-2 -mx-2">
-      <h2 className="text-[#2196F3] font-bold text-xs uppercase tracking-wide flex items-center gap-1">
-        <span>▶</span>
+    <div className="border-b border-gray-300 pb-0.5 mb-2">
+      <h2 className="text-[#2196F3] font-bold text-xs uppercase tracking-wide">
         {children}
       </h2>
     </div>
@@ -91,8 +90,8 @@ export default function ResumePage() {
         style={{ fontSize: "11px", fontFamily: "'Lato', sans-serif" }}
       >
         {/* Header */}
-        <div className="px-6 py-2">
-          <h1 className="text-2xl font-bold tracking-wide mb-1 text-black">
+        <div className="px-6 py-3 flex justify-between items-center">
+          <h1 className="text-2xl font-bold tracking-wide text-black">
             AVINASH K. JAIN
           </h1>
           <div className="flex flex-wrap gap-4 text-xs text-black">
@@ -121,102 +120,66 @@ export default function ResumePage() {
           </div>
         </div>
 
-        {/* Main Content - Two Columns */}
-        <div className="grid grid-cols-2 print:grid-cols-2">
-          {/* Left Column */}
-          <div className="px-4 py-3 border-r border-gray-200">
-            {/* Experience Section */}
-            <SectionHeader>EXPERIENCE</SectionHeader>
-            <div className="space-y-2">
-              {experience.map((exp, index) => (
-                <div key={index}>
-                  <div className="flex justify-between items-start">
-                    <div className="font-bold text-gray-900 text-xs">
-                      {exp.link ? (
-                        <a
-                          href={exp.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="hover:underline"
-                        >
-                          {exp.company}
-                        </a>
-                      ) : (
-                        exp.company
-                      )}
-                    </div>
-                    <div className="text-gray-600 text-[10px] whitespace-nowrap ml-2">
-                      {exp.duration}
-                    </div>
-                  </div>
-                  <div className="text-[#2196F3] text-[10px] leading-tight">
-                    {exp.role}
-                  </div>
-                  <ul className="list-disc list-outside ml-3 text-gray-700 text-[10px] leading-tight mt-0.5 space-y-0.5">
-                    {exp.bullets.map((bullet, bIndex) => (
-                      <li key={bIndex}>{formatBullet(bullet)}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+        {/* Main Content - Single Column */}
+        <div className="px-6 pb-4">
+          {/* Education Section */}
+          <SectionHeader>EDUCATION</SectionHeader>
+          <div className="mb-4">
+            <div className="flex justify-between items-start">
+              <div className="font-bold text-gray-900 text-xs">
+                {education.school}
+              </div>
+              <div className="text-gray-600 text-[10px] whitespace-nowrap ml-2">
+                {education.duration}
+              </div>
             </div>
-
+            <div className="text-gray-700 text-[10px]">
+              {education.major} · {education.honors} · {education.gpa}
+            </div>
           </div>
 
-          {/* Right Column */}
-          <div className="px-4 py-3">
-            {/* Education Section */}
-            <SectionHeader>EDUCATION</SectionHeader>
-            <div className="mb-3">
-              <div className="flex justify-between items-start">
-                <div className="font-bold text-gray-900 text-xs">
-                  {education.school}
+          {/* Experience Section */}
+          <SectionHeader>EXPERIENCE</SectionHeader>
+          <div className="space-y-2.5 mb-4">
+            {experience.map((exp, index) => (
+              <div key={index}>
+                <div className="flex justify-between items-start">
+                  <div className="font-bold text-gray-900 text-xs">
+                    {exp.link ? (
+                      <a
+                        href={exp.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:underline"
+                      >
+                        {exp.company}
+                      </a>
+                    ) : (
+                      exp.company
+                    )}
+                    <span className="font-normal text-[#2196F3] ml-1">
+                      {exp.role}
+                    </span>
+                  </div>
+                  <div className="text-gray-600 text-[10px] whitespace-nowrap ml-2">
+                    {exp.duration}
+                  </div>
                 </div>
-                <div className="text-gray-600 text-[10px] whitespace-nowrap ml-2">
-                  {education.duration}
-                </div>
+                <ul className="list-disc list-outside ml-3 text-gray-700 text-[10px] leading-tight mt-0.5 space-y-0.5">
+                  {exp.bullets.map((bullet, bIndex) => (
+                    <li key={bIndex}>{formatBullet(bullet)}</li>
+                  ))}
+                </ul>
               </div>
-              <div className="text-gray-700 text-[10px] leading-tight">
-                {education.major}
-              </div>
-              <div className="text-gray-700 text-[10px] leading-tight">
-                {education.honors}
-              </div>
-              <div className="text-gray-700 text-[10px] leading-tight">
-                {education.gpa}
-              </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Skills Section */}
-            <SectionHeader>SKILLS</SectionHeader>
-            <div className="text-[10px] space-y-1 mb-3">
-              <div>
-                <span className="font-bold text-gray-900">
-                  SOFTWARE DEVELOPMENT:{" "}
-                </span>
-                <span className="text-gray-700">
-                  {skills.softwareDevelopment.join(", ")}
-                </span>
-              </div>
-              <div>
-                <span className="font-bold text-gray-900">
-                  PLATFORMS / PACKAGES:{" "}
-                </span>
-                <span className="text-gray-700">
-                  {skills.platforms.join(", ")}
-                </span>
-              </div>
-              <div>
-                <span className="font-bold text-gray-900">TOOLS: </span>
-                <span className="text-gray-700">{skills.tools.join(", ")}</span>
-              </div>
-            </div>
-
-            {/* Projects Section */}
-            <SectionHeader>PROJECTS</SectionHeader>
-            <div className="space-y-1.5">
-              {projects.map((project, index) => (
-                <div key={index}>
+          {/* Projects Section */}
+          <SectionHeader>PROJECTS</SectionHeader>
+          <div className="space-y-2 mb-4">
+            {projects.map((project, index) => (
+              <div key={index}>
+                <div className="flex justify-between items-start">
                   <div className="font-bold text-gray-900 text-xs">
                     {project.link ? (
                       <a
@@ -230,40 +193,38 @@ export default function ResumePage() {
                     ) : (
                       project.name
                     )}
+                    {project.award && (
+                      <span className="font-normal text-[#2196F3] ml-1 text-[10px]">
+                        — {project.award}
+                      </span>
+                    )}
                   </div>
-                  {project.award && (
-                    <div className="text-[#2196F3] text-[9px] italic leading-tight">
-                      *{project.award}
-                    </div>
-                  )}
-                  <ul className="list-disc list-outside ml-3 text-gray-700 text-[10px] leading-tight space-y-0.5">
-                    {project.bullets.map((bullet, bIndex) => (
-                      <li key={bIndex}>{formatBullet(bullet)}</li>
-                    ))}
-                  </ul>
                 </div>
-              ))}
-            </div>
-
-            {/* Awards Section */}
-            <div className="mt-3">
-              <SectionHeader>AWARDS</SectionHeader>
-              <div className="space-y-1">
-                {awards.map((award, index) => (
-                  <div
-                    key={index}
-                    className="flex justify-between items-start text-[10px]"
-                  >
-                    <div className="font-bold text-gray-900 leading-tight">
-                      {award.name}
-                    </div>
-                    <div className="text-gray-600 text-right text-[10px] ml-2">
-                      {award.organization}
-                    </div>
-                  </div>
-                ))}
+                <ul className="list-disc list-outside ml-3 text-gray-700 text-[10px] leading-tight space-y-0.5">
+                  {project.bullets.map((bullet, bIndex) => (
+                    <li key={bIndex}>{formatBullet(bullet)}</li>
+                  ))}
+                </ul>
               </div>
-            </div>
+            ))}
+          </div>
+
+          {/* Awards Section */}
+          <SectionHeader>AWARDS</SectionHeader>
+          <div className="text-[10px] text-gray-700 mb-4">
+            {awards.map((award, index) => (
+              <span key={index}>
+                <span className="font-semibold">{award.name}</span>
+                <span className="text-gray-500"> ({award.organization})</span>
+                {index < awards.length - 1 && " · "}
+              </span>
+            ))}
+          </div>
+
+          {/* Skills Section */}
+          <SectionHeader>SKILLS / PACKAGES / PLATFORMS</SectionHeader>
+          <div className="text-[10px] text-gray-700">
+            {[...skills.softwareDevelopment, ...skills.platforms, ...skills.tools].join(" · ")}
           </div>
         </div>
       </div>

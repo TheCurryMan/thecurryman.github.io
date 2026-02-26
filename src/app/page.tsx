@@ -35,8 +35,9 @@ export default function Home() {
               </h1>
               <div className="prose mt-4">
                 <p className=" text-gray-700">
-                  Hey there! I&apos;m Avi. I live in SF and I&apos;m an early
-                  engineer at{" "}
+                  Hey there! I&apos;m Avi. I live in SF and I&apos;m currently exploring what&aposs next. I was the third hire
+                  engineer at Quanta, a Series A startup backed by Accel. We&apos;re a team of 16, building the fastest accounting service for 75+ software
+                  companies. We have a simple principle:{" "}
                   <a target="_blank" href="https://www.usequanta.com/">
                     <u>Quanta</u>
                   </a>
