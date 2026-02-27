@@ -1,10 +1,7 @@
 "use client";
 
-import GitHubCalendar from "react-github-contribution-calendar";
 import { ExperienceMini } from "../components/experience";
-import { allProjects } from "../constants/projects";
-import { runningValues } from "../constants/running";
-import { workoutValues } from "../constants/workout";
+import { allProjects } from '../constants/projects';
 
 export default function Home() {
   var until = "2024-08-03";
@@ -22,40 +19,40 @@ export default function Home() {
   return (
     <div className="bg-white">
       <div className="mx-auto antialiased">
-        <img
-          alt="profile picture"
-          src="/static/images/avi_cover.jpg"
-          className="w-full h-[300px] mx-auto object-cover object-[50%_60%]"
-        />
-        <div className=" border-b sm:pt-16">
+        <div className="max-w-2xl mx-auto p-4 pt-16">
+          <img
+            alt="profile picture"
+            src="/static/images/avi_cover_2.png"
+            className="w-full object-cover object-[50%_60%] rounded-lg"
+          />
+        </div>
+        <div className=" border-b">
           <div className="max-w-2xl mx-auto p-4 ">
             <div className="">
-              <h1 className="font-serif text-black font-normal text-3xl ">
-                Avinash Jain
-              </h1>
+              <h1 className="font-serif text-black font-normal text-3xl ">Avinash Jain</h1>
               <div className="prose mt-4">
                 <p className=" text-gray-700">
-                  Hey there! I&apos;m Avi. I live in SF and I&apos;m currently exploring what&aposs next. I was the third hire
-                  engineer at Quanta, a Series A startup backed by Accel. We&apos;re a team of 16, building the fastest accounting service for 75+ software
-                  companies. We have a simple principle:{" "}
+                  Hey there! I&apos;m Avi. I live in SF and I&apos;m currently exploring what&apos;s
+                  next. I was the third hire engineer at Quanta, a Series A startup backed by Accel.
+                  We&apos;re a team of 16, building the fastest accounting service for 75+ software
+                  companies. We have a simple principle:{' '}
                   <a target="_blank" href="https://www.usequanta.com/">
                     <u>Quanta</u>
                   </a>
-                  , a Series A startup backed by Accel. We&apos;re a team of
-                  16, building the fastest accounting service for 75+ software
-                  companies. We have a simple principle:{" "}
+                  , a Series A startup backed by Accel. We&apos;re a team of 16, building the
+                  fastest accounting service for 75+ software companies. We have a simple
+                  principle:{' '}
                 </p>
                 <div></div>
                 <blockquote className="text-gray-700 not-italic font-normal mb-1">
-                  To answer any financial question or insight about your
-                  business, you need real-time, high quality data. Doing the
-                  accounting is the only way to get that data.
+                  To answer any financial question or insight about your business, you need
+                  real-time, high quality data. Doing the accounting is the only way to get that
+                  data.
                 </blockquote>
                 <p className="text-gray-700">
-                  We&apos;re building the best source of financial data for your
-                  company. And we&apos;re closing your books faster and more
-                  accurately than any other tool or human. If you&apos;re
-                  interested in joining us,{" "}
+                  We&apos;re building the best source of financial data for your company. And
+                  we&apos;re closing your books faster and more accurately than any other tool or
+                  human. If you&apos;re interested in joining us,{' '}
                   <a href="https://www.usequanta.com/careers" target="_blank">
                     we&apos;re hiring!
                   </a>
@@ -133,10 +130,7 @@ export default function Home() {
                   role="executive director · led world's largest collegiate hackathon"
                   link="https://www.calhacks.io/"
                 />
-                <ExperienceMini
-                  companyName="Amazon"
-                  role="SWE · backend algos for the ads team"
-                />
+                <ExperienceMini companyName="Amazon" role="SWE · backend algos for the ads team" />
                 <ExperienceMini
                   companyName="Apple"
                   role="SWE · iOS features for Apple News"
@@ -152,11 +146,7 @@ export default function Home() {
                 {allProjects.map((project) => (
                   <div key={project.title} className="inline-block">
                     <div className="flex flex-col">
-                      <a
-                        href={project.links[0].link}
-                        target="_blank"
-                        rel="noreferer"
-                      >
+                      <a href={project.links[0].link} target="_blank" rel="noreferer">
                         <img
                           alt={project.title}
                           className="w-20 h-20 mr-4 mb-0 rounded-md"
