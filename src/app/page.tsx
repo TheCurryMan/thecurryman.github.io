@@ -97,7 +97,7 @@ export default function Home() {
                 </div>
               </div>
               <h4 className="my-4 font-normal text-xs text-gray-500">
-                Last updated: Dec 1st, 2025
+                Last updated: Feb 26th, 2026
               </h4>
             </div>
           </div>
