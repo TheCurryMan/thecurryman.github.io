@@ -44,7 +44,7 @@ export default function Home() {
                 <p className=" text-gray-700">
                   I also love to teach. I&apos;ve taught over a million students on Udemy how to
                   code through various programming courses. I&apos;ve spun up my own YouTube channel
-                  and built my own project-based platform. I&apos;ve also taught in Chinese,
+                  and built my own project-based platform. You can find me teaching in Chinese,
                   Portuguese, Korean and Hindi to rave reviews ;)
                 </p>
               </div>
