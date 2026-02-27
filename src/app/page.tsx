@@ -38,18 +38,21 @@ export default function Home() {
                 </p>
                 <p className=" text-gray-700">
                   I previously was a founding eng at Quanta, an AI-enabled accounting firm. I helped
-                  build the foundational infrastructure to process hundreds of thousands of
-                  transactions on a monthly basis. I joke that I could get my junior CPA license.
+                  build the foundational infrastructure to process hundreds of thousands of monthly
+                  transactions. I joke that I could get my junior CPA license.
                 </p>
                 <p className=" text-gray-700">
                   I also love to teach. I&apos;ve taught over a million students on Udemy how to
                   code through various programming courses. I&apos;ve spun up my own YouTube channel
-                  and built my own project-based platform. I&apos;ve also teach in Chinese,
+                  and built my own project-based platform. I&apos;ve also taught in Chinese,
                   Portuguese, Korean and Hindi to rave reviews ;)
                 </p>
               </div>
 
               <div className="flex gap-4 leading-6 mt-8">
+                <Link href="/projects" className="text-gray-700 underline">
+                  Projects
+                </Link>
                 <Link href="/photos" className="text-gray-700 underline">
                   Photos
                 </Link>
@@ -152,11 +155,15 @@ export default function Home() {
                   <div key={project.title} className="inline-block">
                     <div className="flex flex-col">
                       <a href={project.links[0].link} target="_blank" rel="noreferer">
-                        <img
-                          alt={project.title}
-                          className="w-20 h-20 mr-4 mb-0 rounded-md"
-                          src={project.logo}
-                        />
+                        {project.logo ? (
+                          <img
+                            alt={project.title}
+                            className="w-20 h-20 mr-4 mb-0 rounded-md"
+                            src={project.logo}
+                          />
+                        ) : (
+                          <div className="w-20 h-20 mr-4 mb-0 rounded-md bg-gray-200" />
+                        )}
                       </a>
                       <p className="text-sm mt-2 mb-0">{project.title}</p>
                     </div>
