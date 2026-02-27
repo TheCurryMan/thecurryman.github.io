@@ -164,22 +164,27 @@ export default function Photos() {
                 }}
                 onClick={() => setSelectedPhoto(photo)}
               >
-                <div className="relative overflow-hidden rounded-lg bg-gray-100">
-                  <Image
-                    src={cfImage(photo.id, 'highres')}
-                    alt={photo.location || 'Photo'}
-                    width={photo.orientation === 'portrait' ? 400 : 600}
-                    height={photo.orientation === 'portrait' ? 600 : 450}
-                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end justify-start p-4">
-                    <div className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {photo.location && <span>{photo.location}</span>}
-                      {photo.location && photo.date && <span> · </span>}
-                      {photo.date && <span>{photo.date}</span>}
+                <div className={photo.quote ? "bg-gray-100 rounded-lg overflow-hidden" : ""}>
+                  <div className="relative overflow-hidden rounded-lg bg-gray-100">
+                    <Image
+                      src={cfImage(photo.id, 'highres')}
+                      alt={photo.location || 'Photo'}
+                      width={photo.orientation === 'portrait' ? 400 : 600}
+                      height={photo.orientation === 'portrait' ? 600 : 450}
+                      className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-end justify-start p-4">
+                      <div className="text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {photo.location && <span>{photo.location}</span>}
+                        {photo.location && photo.date && <span> · </span>}
+                        {photo.date && <span>{photo.date}</span>}
+                      </div>
                     </div>
                   </div>
+                  {photo.quote && (
+                    <p className="text-sm text-gray-600 px-3 py-3 italic">{photo.quote}</p>
+                  )}
                 </div>
               </div>
             ))}

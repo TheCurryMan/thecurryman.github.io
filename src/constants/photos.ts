@@ -3,14 +3,41 @@ export type Photo = {
   date?: string;
   location?: string;
   orientation: 'portrait' | 'landscape';
+  quote?: string;
 };
 
 export const photos: Photo[] = [
+  {
+    id: '551ae8c7-ee4a-4ae5-5370-409586660a00',
+    date: '2026-02',
+    location: "Levi's Stadium, CA",
+    orientation: 'portrait',
+  },
+  {
+    id: '9d11f3c7-43d9-40e6-4ad0-be382a662e00',
+    date: '2026-02',
+    location: "Levi's Stadium, CA",
+    orientation: 'landscape',
+    quote: "I'll never be able to look at Levi's Stadium the same. ",
+  },
+  {
+    id: 'e0dcbe90-1ee3-4494-1276-cf233ae78400',
+    date: '2026-02',
+    location: "Levi's Stadium, CA",
+    orientation: 'landscape',
+  },
+  {
+    id: '7d3d2184-cb30-40c4-033b-02afef967800',
+    date: '2026-02',
+    location: "Levi's Stadium, CA",
+    orientation: 'landscape',
+  },
   {
     id: '9f2a574e-da8b-4722-685e-516068b7a300',
     date: '2026-02',
     location: 'New York, NY',
     orientation: 'landscape',
+    quote: "Alex's grandma is 91. And she was still making us dumplings on CNY. ",
   },
   {
     id: '1bdfa758-35d4-4c61-4581-992e8f689f00',
@@ -19,46 +46,11 @@ export const photos: Photo[] = [
     orientation: 'landscape',
   },
   {
-    id: '551ae8c7-ee4a-4ae5-5370-409586660a00',
-    date: '2026-02',
-    location: 'Levi\'s Stadium, CA',
-    orientation: 'portrait',
-  },
-  {
-    id: '9d11f3c7-43d9-40e6-4ad0-be382a662e00',
-    date: '2026-02',
-    location: 'Levi\'s Stadium, CA',
-    orientation: 'landscape',
-  },
-  {
-    id: 'e0dcbe90-1ee3-4494-1276-cf233ae78400',
-    date: '2026-02',
-    location: 'Levi\'s Stadium, CA',
-    orientation: 'landscape',
-  },
-  {
-    id: '7d3d2184-cb30-40c4-033b-02afef967800',
-    date: '2026-02',
-    location: 'Levi\'s Stadium, CA',
-    orientation: 'landscape',
-  },
-  {
-    id: 'ade7ed4f-ffb3-4b3f-b925-4ac611525600',
-    date: '2025-05',
-    location: 'Redwoods, CA',
-    orientation: 'portrait',
-  },
-  {
-    id: '5cbba266-042d-4bbc-8a46-a025cbd8e800',
-    date: '2026-01',
-    location: 'New York, NY',
-    orientation: 'landscape',
-  },
-  {
     id: '7a875996-43de-427b-3ee4-083e1ca63700',
     date: '2026-01',
     location: 'Boston, MA',
     orientation: 'landscape',
+    quote: 'The train conductor joined them to play Uno. Beautiful moment. ',
   },
   {
     id: 'e3131e22-ed0f-40cc-0f62-c44342ff3700',
@@ -71,6 +63,15 @@ export const photos: Photo[] = [
     date: '2026-01',
     location: 'Boston, MA',
     orientation: 'landscape',
+    quote: 'The greatest restaurant in all of Boston.',
+  },
+  {
+    id: '5cbba266-042d-4bbc-8a46-a025cbd8e800',
+    date: '2026-01',
+    location: 'New York, NY',
+    orientation: 'landscape',
+    quote:
+      'We made the snowman in this picture. (by we, I mean my friends, and I came right when they finished)',
   },
   {
     id: 'e1158c06-04d3-4109-e13c-e23ad0fe9100',
@@ -113,12 +114,14 @@ export const photos: Photo[] = [
     date: '2025-11',
     location: 'San Francisco, CA',
     orientation: 'landscape',
+    quote: "One of the last photo's of the Quanta office before I left. ",
   },
   {
     id: '77a5ee06-b1f8-4518-cf8b-6dc4672e7900',
     date: '2025-05',
     location: 'China',
     orientation: 'landscape',
+    quote: 'Chongqing spicy hot pot. 10/10. ',
   },
   {
     id: '1f0fa4db-a956-4540-7e6e-2b6e5693a500',
@@ -163,6 +166,12 @@ export const photos: Photo[] = [
     orientation: 'portrait',
   },
   {
+    id: 'ade7ed4f-ffb3-4b3f-b925-4ac611525600',
+    date: '2025-05',
+    location: 'Redwoods, CA',
+    orientation: 'portrait',
+  },
+  {
     id: '78b899c7-be88-42f8-9b96-73880ec91000',
     date: '2025-01',
     location: 'India',
@@ -197,7 +206,7 @@ export const photos: Photo[] = [
     date: '2025-01',
     location: 'Trojan Point, CA',
     orientation: 'landscape',
-  }
+  },
 ];
 
 const ACCOUNT_HASH = "-53jB08vdBepgZVBL22TNA";

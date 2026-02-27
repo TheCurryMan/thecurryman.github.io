@@ -123,6 +123,19 @@ export default function PhotosAdmin() {
                 </div>
 
                 <div className="col-span-3">
+                  <label className="block text-xs text-gray-500 mb-1">
+                    Quote
+                  </label>
+                  <input
+                    type="text"
+                    value={photo.quote || ""}
+                    onChange={(e) => updatePhoto(index, "quote", e.target.value)}
+                    className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-black"
+                    placeholder="Why is this photo special to you?"
+                  />
+                </div>
+
+                <div className="col-span-3">
                   <label className="block text-xs text-gray-500 mb-1">ID</label>
                   <code className="text-xs text-gray-400">{photo.id}</code>
                 </div>

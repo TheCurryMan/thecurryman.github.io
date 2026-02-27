@@ -14,6 +14,7 @@ export async function GET() {
     date?: string;
     location?: string;
     orientation: string;
+    quote?: string;
   }> = [];
 
   // Split by photo objects and parse each one
@@ -25,6 +26,7 @@ export async function GET() {
     // Handle location with double quotes (for values with apostrophes) or single quotes
     const locationMatch = obj.match(/location:\s*"([^"]+)"/) || obj.match(/location:\s*'([^']+)'/);
     const orientationMatch = obj.match(/orientation:\s*['"]([^'"]+)['"]/);
+    const quoteMatch = obj.match(/quote:\s*"([^"]*)"/) || obj.match(/quote:\s*'([^']*)'/);
 
     if (idMatch && orientationMatch) {
       photos.push({
@@ -32,6 +34,7 @@ export async function GET() {
         date: dateMatch?.[1] || "",
         location: locationMatch?.[1] || "",
         orientation: orientationMatch[1],
+        quote: quoteMatch?.[1] || "",
       });
     }
   }
@@ -47,17 +50,24 @@ export async function POST(request: Request) {
   date?: string;
   location?: string;
   orientation: 'portrait' | 'landscape';
+  quote?: string;
 };
 
 export const photos: Photo[] = [
 ${photos
   .map(
-    (p: { id: string; date?: string; location?: string; orientation: string }) => `  {
-    id: '${p.id}',
-    date: '${p.date || ""}',
-    location: '${(p.location || "").replace(/'/g, "\\'")}',
-    orientation: '${p.orientation}',
-  }`
+    (p: { id: string; date?: string; location?: string; orientation: string; quote?: string }) => {
+      const lines = [
+        `    id: '${p.id}'`,
+        `    date: '${p.date || ""}'`,
+        `    location: "${(p.location || "").replace(/"/g, '\\"')}"`,
+        `    orientation: '${p.orientation}'`,
+      ];
+      if (p.quote) {
+        lines.push(`    quote: "${(p.quote || "").replace(/"/g, '\\"')}"`);
+      }
+      return `  {\n${lines.join(",\n")},\n  }`;
+    }
   )
   .join(",\n")}
 ];
