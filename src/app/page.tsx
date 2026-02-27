@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { ExperienceMini } from "../components/experience";
 import { allProjects } from '../constants/projects';
 
@@ -33,30 +34,28 @@ export default function Home() {
               <div className="prose mt-4">
                 <p className=" text-gray-700">
                   Hey there! I&apos;m Avi. I live in SF and I&apos;m currently exploring what&apos;s
-                  next. I was the third hire engineer at Quanta, a Series A startup backed by Accel.
-                  We&apos;re a team of 16, building the fastest accounting service for 75+ software
-                  companies. We have a simple principle:{' '}
-                  <a target="_blank" href="https://www.usequanta.com/">
-                    <u>Quanta</u>
-                  </a>
-                  , a Series A startup backed by Accel. We&apos;re a team of 16, building the
-                  fastest accounting service for 75+ software companies. We have a simple
-                  principle:{' '}
+                  next.
                 </p>
-                <div></div>
-                <blockquote className="text-gray-700 not-italic font-normal mb-1">
-                  To answer any financial question or insight about your business, you need
-                  real-time, high quality data. Doing the accounting is the only way to get that
-                  data.
-                </blockquote>
-                <p className="text-gray-700">
-                  We&apos;re building the best source of financial data for your company. And
-                  we&apos;re closing your books faster and more accurately than any other tool or
-                  human. If you&apos;re interested in joining us,{' '}
-                  <a href="https://www.usequanta.com/careers" target="_blank">
-                    we&apos;re hiring!
-                  </a>
+                <p className=" text-gray-700">
+                  I previously was a founding eng at Quanta, an AI-enabled accounting firm. I helped
+                  build the foundational infrastructure to process hundreds of thousands of
+                  transactions on a monthly basis. I joke that I could get my junior CPA license.
                 </p>
+                <p className=" text-gray-700">
+                  I also love to teach. I&apos;ve taught over a million students on Udemy how to
+                  code through various programming courses. I&apos;ve spun up my own YouTube channel
+                  and built my own project-based platform. I&apos;ve also teach in Chinese,
+                  Portuguese, Korean and Hindi to rave reviews ;)
+                </p>
+              </div>
+
+              <div className="flex gap-4 leading-6 mt-8">
+                <Link href="/photos" className="text-gray-700 underline">
+                  Photos
+                </Link>
+                <Link href="/writings" className="text-gray-700 underline">
+                  Writings
+                </Link>
               </div>
 
               <div className="text-md mt-8">
@@ -109,6 +108,12 @@ export default function Home() {
                 Eat. Code. <s>Sleep.</s> Repeat.
               </div>
               <div className="flex flex-col gap-4 leading-6">
+                <ExperienceMini
+                  companyName="Quanta"
+                  role="founding engineer · AI-enabled accounting platform"
+                  stats="built the company 0 -> 1, processed $1B+ in volume"
+                  link="https://www.usequanta.com/"
+                />
                 <ExperienceMini
                   companyName="Cardinal"
                   role="co-founder · NFT infrastucture on Solana"

@@ -25,7 +25,7 @@ export default function Photos() {
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
   const [positions, setPositions] = useState<{ x: number; y: number }[]>([]);
   const [containerHeight, setContainerHeight] = useState(0);
-  const [colPreference, setColPreference] = useState<2 | 3>(3);
+  const [colPreference, setColPreference] = useState<2 | 3>(2);
   const containerRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const windowWidth = useWindowSize();
